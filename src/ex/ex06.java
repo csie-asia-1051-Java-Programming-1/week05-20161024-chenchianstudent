@@ -11,19 +11,29 @@ public class ex06 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner scn=new Scanner(System.in);
-		int a[]={5,6,7,4,9,11,15,13};
-		for(int i=0;i<=a.length-1;i++){
-			for(int j=0;j<=a.length-i-1;j++){
-			if(a[j+1]>a[j]){
-				int t=a[j+1];
-				a[j+1]=a[j];
-				a[j]=t;
+		System.out.print("總共有幾人");
+		int n=scn.nextInt();
+		int data[]=new int[n];
+		System.out.print("請輸入學號");	
+		for(int i=0;i<data.length;i++){
+		int num=scn.nextInt();
+		data[i]=num;
+		}
+		
+		for(int i=0;i<data.length-1;i++){
+			for(int j=0;j<data.length-1-i;j++){
+			if(data[j+1]>data[j]){
+				int t=data[j+1];
+				data[j+1]=data[j];
+				data[j]=t;
+				
 			}
 			
 			}
 			
 		}
-		System.out.print(a[i]);
+		for(int i=0;i<data.length;i++){
+			System.out.print(data[i]+"\t");}
 		
 	}
 	
