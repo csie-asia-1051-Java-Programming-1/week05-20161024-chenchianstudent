@@ -12,12 +12,20 @@ public class hw02 {
 		int m=0;
 		int sum=0;
 		while(sum<n){
-			m++;
-			sum=sum+m;
 			
+			sum=sum+m;
+			m++;
+			if(sum>=n){
+			System.out.print(m-1);
+			}
+			else{
+			if(sum>=n){
+			System.out.print(m);	
+			}	
+			}
 		}
 		
-		System.out.print(m);
+		
 		
 		
 		
